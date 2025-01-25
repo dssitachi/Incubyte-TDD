@@ -9,4 +9,8 @@ describe('String Calculator', () => {
   it('returns the number for a single number', () => {
     expect(add('5')).toBe(5);
   });
+
+  it('adds two comma-separated numbers', () => {
+    expect(add('1,2')).toBe(3);
+  });
 });
