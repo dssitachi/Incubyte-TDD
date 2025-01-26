@@ -7,8 +7,12 @@ export function add(numbers) {
 		return parseInt(numbers);
 	}
 
+	// Replace newlines with commas to normalize delimiters
+	const normalizedNumbers = numbers.replace(/\n/g, ',');
+
 	// Split by comma and sum all numbers
-	return numbers
-    .split(',')
-    .reduce((sum, num) => sum + parseInt(num), 0);
+	return normalizedNumbers
+	  .split(',')
+	  .reduce((sum, num) => sum + parseInt(num), 0);
+
 }
