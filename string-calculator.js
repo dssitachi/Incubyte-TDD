@@ -7,7 +7,8 @@ export function add(numbers) {
 		return parseInt(numbers);
 	}
 
-	// Split and sum two numbers
-	const [num1, num2] = numbers.split(",");
-	return parseInt(num1) + parseInt(num2);
+	// Split by comma and sum all numbers
+	return numbers
+    .split(',')
+    .reduce((sum, num) => sum + parseInt(num), 0);
 }
